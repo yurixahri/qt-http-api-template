@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
             return sendStatus("Forbidden", QHttpServerResponse::StatusCode::Forbidden);
         }
         /*
-            I was struggling to choose with style of frontend I want to use, I end up using svelte.
+            I was struggling to choose which style of frontend I want to use, I end up using svelte.
             You can custom endpoint yourself to send htmx component, or the old MVC way with inja template
 
             htmx version:
