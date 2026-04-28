@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
                 QString html = mainPage("Hello"); //see example in htmlTemplate.h
                 QHttpServerResponse response("text/html; charset=utf-8", html, QHttpServerResponse::StatusCode::Ok);
 
-            see the httpTemplate.h for reference
+            see the htmlTemplate.h for reference
         */
         return sendStatus(QHttpServerResponse::StatusCode::Ok);
     });
