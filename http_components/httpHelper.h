@@ -208,8 +208,6 @@ void serveFile(QString &path, const QHttpServerRequest &request, QHttpServerResp
     }
 
     responder.write(file, headers, status);
-    file->close();
-    delete file;
 }
 
 
