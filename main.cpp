@@ -46,8 +46,11 @@ int main(int argc, char *argv[])
         return sendStatus(QHttpServerResponse::StatusCode::Ok);
     });
 
-    // POST method required OPTION method if the message is JSON
-    server.route("/post", QHttpServerRequest::Method::Options,
+    /*
+    POST method required OPTION method if the header contains application/json (or complex header).
+    You can write each OPTION route for each POST route, but it is more convinient to have one global OPTION route
+    */
+    server.route("/*", QHttpServerRequest::Method::Options,
                  [](const QHttpServerRequest &) {
                      return sendStatus(QHttpServerResponse::StatusCode::Ok);
                  });
