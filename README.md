@@ -1,1 +1,3 @@
 This is a static build, please install qt-static, or if you don't want to static build, remove static in qmake (.pro)
+
+You can use it for REST api, mvc... very useful and lightweight, since it will just run on it own, no need for 3rd app to host like apache, nodejs...
